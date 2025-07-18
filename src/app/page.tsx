@@ -1,13 +1,20 @@
 'use client';
 
 import Link from 'next/link';
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-500">
-      <h1 className="text-5xl font-bold mb-4 text-blue-700 dark:text-blue-300">
-        Hi, I'm Nelly Jericho 👋
-      </h1>
+      
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-5xl font-bold mb-4 text-blue-700 dark:text-blue-300">  Hi, I'm Nelly Jericho 👋
+          </h1>
+        </motion.div>
       <p className="text-lg mb-6 text-gray-700 dark:text-gray-300">
         Aspiring Software Engineer | Frontend Developer
       </p>
